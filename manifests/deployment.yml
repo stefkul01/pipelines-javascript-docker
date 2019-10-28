@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: stefkulpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: stefkulpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: stefkulpipelinesjavascriptdocker 
+          image: jkcontainerregistry0001.azurecr.io/stefkulpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
